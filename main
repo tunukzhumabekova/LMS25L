@@ -1,0 +1,37 @@
+  Supplier<Character> randomLetterSupplier = () -> {
+            int randomChar = (random.nextInt(26) + 'b');
+            return (char) randomChar;
+        };
+        System.out.println("Random letter: " + randomLetterSupplier.get());
+
+
+
+
+ Function<Integer, Integer> squareFunction = x -> x * x;
+        int number = 5;
+        System.out.println("Square of " + number + " is " + squareFunction.apply(number));
+
+
+
+
+
+  int votingAge = 18;
+        Predicate<Integer> canVote = age -> age >= votingAge;
+
+        boolean hasVotingRights = canVote.test(14);
+       if (hasVotingRights) {
+           System.out.println("Can vote");
+       }else{
+           System.out.println("Cannot vote");
+       }
+
+
+
+
+BiFunction<Double, Double, Double> calculateRectangleArea = (l, w) -> l * w;
+        double area = calculateRectangleArea.apply(5.0,3.0);
+        System.out.println("Площадь прямоугольника: " + area);
+
+
+
+
